@@ -1,5 +1,5 @@
 <script>
-const path = window.location.pathname;
-const afterSlash = path.split('/')[2];
-document.write(decodeURIComponent(afterSlash));
+const urlParams = new URLSearchParams(window.location.search);
+const dataValue = urlParams.get('data');
+document.write(dataValue);
 </script>
